@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 12:48:32 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/04 11:56:35 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 10:37:59 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,15 @@ typedef struct s_collect_img
 	void	*img_0;
 	void	*img_1;
 }	t_collect_img;
+
+/* animation for disappear effect */
+typedef struct s_effect
+{
+	void		*img;
+	t_vector	pos;
+	int			frames;
+	int			counter;
+}	t_effect;
 
 /* image for entire screen */
 typedef struct s_img_entire
@@ -169,6 +178,7 @@ typedef struct s_game
 	void			*red_panel;
 	void			*door_open_img;
 	void			*door_close_img;
+	t_effect		effect;
 }	t_game;
 
 /* ---- FUNCTIONS ---- */
@@ -179,9 +189,10 @@ void	*new_panel(t_game *game, t_color color);
 int		input(int key, t_game *game);
 int		update(t_game *game);
 void	render(t_game game);
-void	action_anim(t_player *player);
-void	remove_player(t_game *game);
-void	kill_player(t_game *game, t_vector pos);
+void	action_anima(t_player *player);
+void	effect_anima(t_effect *effect, t_vector pos);
+void	player_remove(t_game *game);
+void	player_kill(t_game *game, t_vector pos);
 int		reset(t_game *game);
 int		end_program(t_game *game);
 

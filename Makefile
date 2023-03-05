@@ -6,22 +6,17 @@
 #    By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 10:09:33 by tstrassb          #+#    #+#              #
-#    Updated: 2023/03/04 13:37:10 by tstrassb         ###   ########.fr        #
+#    Updated: 2023/03/05 09:58:18 by tstrassb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	so_long
 
-CC			=	cc
-
 CFLAGS		=	-Wall -Wextra -Werror
 
 RM			=	rm -rf
 
-SRCS		=	$(MAIN_SRC) $(SRC_MAP) $(SCR_GAME)
-
-MINILIBX	=	minilibx/
-LIBMLX_A	=	libmlx.a
+SRCS		=	$(MAIN_SRC) $(SRC_MAP) $(SRC_GAME)
 
 MAIN_SRC	=	main.c error.c
 
@@ -33,14 +28,14 @@ MAP			=	map_reader.c map_checker.c map_checker_utils.c\
 				tilemap_generator.c enemy_generator.c
 SRC_MAP		=	$(addprefix map/, $(MAP))
 
-GAME		=	draw_wall.c end_program.c enemy_ai.c follower_ai.c game_init.c\
-				input.c open_images.c open_panel.c open_wall_images.c\
-				player_kill.c player_movement.c render.c reset.c update.c
+GAME		=	game_init.c open_images.c open_wall_images.c open_panel.c\
+					input.c player_movement.c player_kill.c update.c enemy_ai.c follower_ai.c\
+					render.c draw_wall.c\
+					reset.c end_program.c
 
 SRC_GAME	=	$(addprefix game/, $(GAME))
 
-%.o:			%.c
-				@$(CC) $(CFLAGS) -c $< -o $@
+OBJ			=	*.o
 
 INCLUDE		=	-lmlx -framework OpenGL -framework AppKit
 
@@ -62,10 +57,8 @@ all:			$(NAME)
 $(NAME):		$(OBJ)
 				@echo "$(BLUE)-compiling libft...$(DEF_COLOR)"
 				@make -C $(LIBFT_DIR)
-				@echo "$(BLUE)-compiling minilibx...$(DEF_COLOR)"
-				@make -C $(MINILIBX)
 				@echo "$(BLUE)-compiling GAME...$(DEF_COLOR)"
-				@gcc $(CFLAGS) $(LIBFT) $(MINILIBX)libmlx.a $(INCLUDE) -o $(NAME)
+				@cc $(CFLAGS) $(OBJ) $(LIBFT) $(INCLUDE) -o $(NAME)
 				@echo "$(GREEN)-GAME ready-$(DEF_COLOR)"
 
 $(OBJ):			$(SRCS)
@@ -82,8 +75,6 @@ clean:
 				@echo "$(YELLOW)-Cleaning object files ...$(DEF_COLOR)"
 				@$(RM) *.o
 				@make -C $(LIBFT_DIR) clean
-				@echo "$(YELLOW)-Cleaning libmlx ...$(DEF_COLOR)"
-				@make -C $(MINILIBX) clean
 				@sleep 1.5
 				@echo "$(GREEN)---CLEANED!---$(DEF_COLOR)"
 

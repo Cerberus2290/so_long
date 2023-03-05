@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 17:16:26 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/02/28 18:13:02 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 10:10:40 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ t_bool	move_horiz(t_enemies *enemy, t_game *game)
 		else if (enemy->tile->left->type == PLAYER)
 		{
 			move_enemy_to(enemy, enemy->tile->left);
-			kill_player(game, enemy->tile->position);
+			player_kill(game, enemy->tile->position);
 		}
 		else
 			return (change_dir(enemy));
@@ -58,7 +58,7 @@ t_bool	move_horiz(t_enemies *enemy, t_game *game)
 		else if (enemy->tile->right->type == PLAYER)
 		{
 			move_enemy_to(enemy, enemy->tile->right);
-			kill_player(game, enemy->tile->position);
+			player_kill(game, enemy->tile->position);
 		}
 		else
 			return (change_dir(enemy));
@@ -76,7 +76,7 @@ t_bool	move_verti(t_enemies *enemy, t_game *game)
 		else if (enemy->tile->up->type == PLAYER)
 		{
 			move_enemy_to(enemy, enemy->tile->up);
-			kill_player(game, enemy->tile->position);
+			player_kill(game, enemy->tile->position);
 		}
 		else
 			return (change_dir(enemy));
@@ -88,7 +88,7 @@ t_bool	move_verti(t_enemies *enemy, t_game *game)
 		else if (enemy->tile->down->type == PLAYER)
 		{
 			move_enemy_to(enemy, enemy->tile->down);
-			kill_player(game, enemy->tile->position);
+			player_kill(game, enemy->tile->position);
 		}
 		else
 			return (change_dir(enemy));
@@ -112,7 +112,7 @@ void	move_enemies(t_game *game)
 			move_verti(current, game);
 		else if (current->type == FOLLOW_ENEMY)
 			follow_player(current, game);
-		if (current->type == NULL)
+		if (current->next == NULL)
 			break ;
 		current = current->next;
 	}

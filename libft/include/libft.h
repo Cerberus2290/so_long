@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 13:53:09 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/02/12 12:43:02 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 09:45:09 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int		ft_isascii(int c);
 
 int		ft_isprint(int c);
 
-size_t	ft_strlen(const char *s);
+int		ft_strlen(const char *s);
 
 void	*ft_memset(void *b, int c, size_t len);
 
@@ -64,7 +64,9 @@ char	*ft_strchr(const char *s, int c);
 
 char	*ft_strrchr(const char *s, int c);
 
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strncmp(const char *str1, const char *str2, size_t n);
+
+int		ft_strend_cmp(char *name, char *end);
 
 void	*ft_memchr(const void *s, int c, size_t n);
 
@@ -78,9 +80,9 @@ void	*ft_calloc(size_t count, size_t size);
 
 char	*ft_strdup(const char *s1);
 
-char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(char const *s, int start, int len);
 
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char *s2);
 
 char	*ft_strtrim(char const *s1, char const *set);
 
@@ -117,5 +119,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+int		ft_chartable_linecount(char **table);
+
+void	ft_free_chartable(char **table);
 
 #endif

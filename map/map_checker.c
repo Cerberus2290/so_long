@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 16:05:07 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/02/25 16:58:22 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 11:14:57 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static t_mapdata	init_checkerdata(char **map)
 	t_mapdata	data;
 
 	data.size.x = ft_strlen(map[0]);
-	data.size.y = ft_chart_linecount(map);
+	data.size.y = ft_chartable_linecount(map);
 	data.b_player = FALSE;
 	data.b_exit = FALSE;
 	data.b_collect = FALSE;
@@ -57,6 +57,8 @@ static int	checks(char **map, t_mapdata *data)
 		return (error("invalid map character found - abort"));
 	if (!valid_uniqchar(map[y][x], 'P', &data->b_player))
 		return (error("only one player tile allowed - abort"));
+	if (map[y][x] == 'E')
+		data->b_exit = TRUE;
 	if (!valid_border(map[y][x], data->point, data->size))
 		return (error("map must be completely closed by '1' - abort"));
 	if (map[y][x] == 'C')
@@ -81,12 +83,12 @@ int	valid_map(char **map)
 		while (map[data.point.y][data.point.x])
 		{
 			if (checks(map, &data) == FALSE)
-				valid = TRUE;
+				valid = FALSE;
 			data.point.x++;
 		}
 		data.point.y++;
 	}
-	if (!data.b_player || !data.b_exit || !data.b_collect)
-		valid = error("map must have one 'P' and 'E' and at least one 'C'");
+	/* if (!data.b_player || !data.b_exit || !data.b_collect)
+		valid = error("map must have one 'P' and 'E' and at least one 'C'"); */
 	return (valid);
 }

@@ -6,7 +6,7 @@
 #    By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/15 13:35:08 by tstrassb          #+#    #+#              #
-#    Updated: 2023/02/12 16:16:11 by tstrassb         ###   ########.fr        #
+#    Updated: 2023/03/05 10:43:22 by tstrassb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,14 +46,14 @@ FTMEM_DIR		=		ft_mem/
 FTMEM			=		ft_bzero ft_calloc ft_memchr ft_memcmp ft_memmove ft_memset
 
 FTPUT_DIR		=		ft_put/
-FTPUT			=		ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd
+FTPUT			=		ft_putchar_fd ft_putendl_fd ft_putnbr_fd ft_putstr_fd tables
 
 FTTO_DIR		=		ft_to/
 FTTO			=		ft_atoi ft_itoa ft_tolower ft_toupper
 
 FTSTR_DIR		=		ft_str/
 FTSTR			=		ft_split ft_strchr ft_strdup ft_striteri ft_strjoin \
-						ft_strlcat ft_strlcpy ft_strlen ft_strmapi ft_strncmp \
+						ft_strlcat ft_strlcpy ft_strmapi ft_strncmp \
 						ft_strnstr ft_strrchr ft_strtrim ft_substr
 
 FTLST_DIR		=		ft_lst/

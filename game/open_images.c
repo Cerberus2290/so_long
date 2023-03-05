@@ -6,14 +6,14 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 10:43:31 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/02 10:04:42 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 10:36:34 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	open_wallimg_up(t_game *game);
-void	open_wallimg_down(t_game *game);
+void	open_wall_imgs_up(t_game *game);
+void	open_wall_imgs_down(t_game *game);
 
 static void	open_player_imgs(t_game *game)
 {
@@ -57,8 +57,8 @@ static void	open_portal_imgs(t_game *game)
 /* opens all *.xpm files from "sprites/" used in game */
 void	open_images(t_game *game)
 {
-	open_wallimg_up(game);
-	open_wallimg_down(game);
+	open_wall_imgs_up(game);
+	open_wall_imgs_down(game);
 	open_player_imgs(game);
 	open_collect_imgs(game);
 	open_enemy_imgs(game);

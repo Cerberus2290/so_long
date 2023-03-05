@@ -1,30 +1,71 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: tstrassb <tstrassb@student.42wolfsburg.    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/15 15:18:07 by tstrassb          #+#    #+#             */
-/*   Updated: 2022/12/16 08:51:51 by tstrassb         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+/* Compares no more than <n> chars of <str1> and <str2>.
+Returns the difference (*str1 - *str2) between the first different char.
+0 if the no difference is found. */
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	size_t	i;
-
 	if (n == 0)
 		return (0);
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0')
+	while (*str1 != '\0' && *str2 != '\0' && n--)
 	{
-		if (i < (n - 1))
-			i++;
-		else
-			return (0);
+		if (*str1 != *str2)
+			return ((unsigned char)*str1 - (unsigned char)*str2);
+		str1++;
+		str2++;
 	}
-	return ((unsigned char)(s1[i]) - (unsigned char)(s2[i]));
+	if (n != 0 && (*str1 == '\0' || *str2 == '\0'))
+		return ((unsigned char)*str1 - (unsigned char)*str2);
+	return (0);
+}
+
+/* Returns 1 if <name> ends in <extension>, 0 if not */
+int	ft_strend_cmp(char *name, char *end)
+{
+	int	name_len;
+	int	ext_len;
+
+	name_len = ft_strlen(name);
+	ext_len = ft_strlen(end);
+	if (name_len <= ext_len)
+		return (0);
+	name += name_len - ext_len;
+	while (*name)
+	{
+		if (*name != *end)
+			return (0);
+		name++;
+		end++;
+	}
+	return (1);
+}
+
+/* Returns a pointer to the first char
+of the first occurrence of <little> in <big>.
+If <little> is an empty string, <big> is returned.
+if <big> not includes <little>, NULL is returned. */
+char	*ft_strnstr(const char *big, const char *little, size_t len)
+{
+	int	i;
+
+	if (*little == '\0')
+		return ((char *)big);
+	while (*big != '\0' && len > 0)
+	{
+		if (*big == *little)
+		{
+			i = 0;
+			while (little[i] != '\0' && len - i > 0)
+			{
+				if (little[i] != big[i])
+					break ;
+				i++;
+			}
+			if (little[i] == '\0')
+				return ((char *)big);
+		}
+		len--;
+		big++;
+	}
+	return (NULL);
 }

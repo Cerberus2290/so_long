@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 12:15:27 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/02/26 12:34:11 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 10:29:17 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@ void	move_to_empty(t_game *game, t_tile *tile);
 void	move_to_exit(t_game *game, t_tile *tile);
 void	pick_to_collect(t_game *game, t_tile *tile);
 void	move_to_enemy(t_game *game, t_tile *tile);
+
+/* starts and places effect for disappear */
+void	effect_anima(t_effect *effect, t_vector pos)
+{
+	effect->counter = 0;
+	effect->pos = pos;
+}
 
 /* start action animation for player */
 void	action_anima(t_player *player)
