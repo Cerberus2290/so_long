@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 13:41:45 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/02/28 13:46:42 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 13:03:20 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	free_enemies(t_game *game)
 	}
 }
 
-/*  */
+/* frees all memory and makes exit(0) */
 int	end_program(t_game *game)
 {
 	free_tilemap(game);

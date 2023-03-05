@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 11:50:07 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/02/26 12:13:05 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 14:18:03 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,11 +44,17 @@ t_tile	**map_init(int argc, char **argv, t_game *game)
 void	game_init(t_game *game)
 {
 	game->mlx = mlx_init();
-	game->window = mlx_new_window(game->mlx,
-			game->window_size.x + IMG_SIZE / 2,
-			game->window_size.y, "so_long");
+	game->window = mlx_new_window(game->mlx, 1920, 1080,
+			/* game->window_size.x + IMG_SIZE / 2,
+			game->window_size.y, */ "so_long");
+
+	printf("%d\n", game->window_size.x);
+	printf("%d\n", game->window_size.y);
+
 	mlx_hook(game->window, 17, 0, end_program, game);
 	open_images(game);
+	game->white_panel = new_panel(game, new_color(254, 254, 254, 0));
+	game->red_panel = new_panel(game, new_color(197, 4, 4, 0));
 }
 
 /* set frames for animations */
@@ -56,6 +62,7 @@ static void	anima_setup(t_game *game)
 {
 	game->player.frames_idle = 17;
 	game->player.frames_action = 10;
+	game->effect.frames = 7;
 	game->enemy_imgs.basic_anim = 16;
 	game->enemy_imgs.follow_anim = 6;
 }

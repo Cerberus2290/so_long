@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:14:52 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/02/28 16:00:41 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 13:29:48 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,12 @@ static void	collect_animation(t_collect_img *img)
 	frame += 1;
 }
 
+static void	effect_animation(t_effect *effect)
+{
+	if (effect->counter < effect->frames)
+		effect->counter++;
+}
+
 static void	enemy_animation(t_enemy_anim *img)
 {
 	static int	std_count;
@@ -62,7 +68,7 @@ static void	enemy_animation(t_enemy_anim *img)
 		std_count = 0;
 	}
 	std_count++;
-	if (follower_count == img->follow_anim * 2)
+	if (follower_count == img->follow_anim)
 		img->follow_current = img->follow_01;
 	else if (follower_count > img->follow_anim * 2)
 	{
@@ -72,12 +78,14 @@ static void	enemy_animation(t_enemy_anim *img)
 	follower_count++;
 }
 
+
 /* calculates all animation and render
 function is called once every frame */
 int	update(t_game *game)
 {
 	player_animation(&game->player);
 	collect_animation(&game->collect_imgs);
+	effect_animation(&game->effect);
 	enemy_animation(&game->enemy_imgs);
 	render(*game);
 	return (1);

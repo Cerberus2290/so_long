@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 13:58:00 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/02/28 15:04:36 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 13:23:52 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,15 @@ static void	draw_sprite(t_tile tile, t_game game, t_vector pos)
 	else if (tile.type == FOLLOWER)
 		mlx_put_image_to_window(game.mlx, game.window,
 			game.enemy_imgs.follow_current, pos.x, pos.y);
+}
+
+/* draws effect if effect counter is less than its animation frames */
+static void	draw_effect(t_game game)
+{
+	if (game.effect.counter < game.effect.frames)
+		mlx_put_image_to_window(game.mlx, game.window,
+				game.effect.img,
+				game.effect.pos.x, game.effect.pos.y);
 }
 
 /* displays the amount of moves taken in the window,
@@ -76,6 +85,7 @@ void	render(t_game game)
 		{
 			tile = game.tilemap[y][x];
 			draw_sprite(tile, game, tile.position);
+			draw_effect(game);
 			x++;
 		}
 		y++;

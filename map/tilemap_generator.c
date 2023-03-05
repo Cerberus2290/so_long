@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 09:45:49 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/02/26 10:24:45 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 13:44:40 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,13 @@ t_tile	**alloc_tilemap(char **map)
 	t_tile	**tilemap;
 	int		i;
 
-	tilemap = ft_calloc(1, sizeof(t_tile *) * ft_chartable_linecount(map) + 1);
+	tilemap = malloc(sizeof(t_tile *) * ft_chartable_linecount(map) + 1);
 	if (tilemap == NULL)
 		return (NULL);
 	i = 0;
 	while (map[i] != NULL)
 	{
-		tilemap[i] = ft_calloc(1, sizeof(t_tile) * ft_strlen(*map) + 1);
+		tilemap[i] = malloc(sizeof(t_tile) * ft_strlen(*map) + 1);
 		if (tilemap == NULL)
 		{
 			while (i > 0)

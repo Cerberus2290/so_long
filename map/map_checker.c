@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 16:05:07 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 11:14:57 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 14:18:45 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ static t_mapdata	init_checkerdata(char **map)
 	data.b_player = FALSE;
 	data.b_exit = FALSE;
 	data.b_collect = FALSE;
-	data.point.x = 0;
 	data.point.y = 0;
+	data.point.x = 0;
 	return (data);
 }
 
@@ -78,7 +78,7 @@ int	valid_map(char **map)
 	while (map[data.point.y])
 	{
 		if (ft_strlen(map[data.point.y]) != data.size.x)
-			valid = error("map mus be in shape of rectangle - abort");
+			valid = error("map must be in shape of rectangle - abort");
 		data.point.x = 0;
 		while (map[data.point.y][data.point.x])
 		{
