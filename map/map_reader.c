@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 08:59:34 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/06 12:28:36 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 17:06:39 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,13 @@ static char	**alloc_collums(char *file)
 	line_count = mapfile_countlines(file);
 	if (line_count <= 0)
 		return (null_error("error map - file may not exist or is empty"));
-	map = malloc(sizeof(char *) * line_count + 1);
+	map = malloc(sizeof(char *) * (line_count + 1));
 	if (map == NULL)
+	{
+		free(map);
 		return (null_error("error allocating memory in alloc_collums - abort"));
+	}
+	map[line_count] = NULL;
 	return (map);
 }
 
@@ -71,7 +75,7 @@ char	**read_map(char *file)
 	i = 0;
 	while (get_next_line(fd, &map[i++]))
 		;
-	map[i] = NULL;
+	/* map[i] = NULL; */
 	close(fd);
 	return (map);
 }

@@ -6,13 +6,13 @@
 #    By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 10:09:33 by tstrassb          #+#    #+#              #
-#    Updated: 2023/03/06 10:14:25 by tstrassb         ###   ########.fr        #
+#    Updated: 2023/03/06 17:24:56 by tstrassb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	so_long
 
-CFLAGS		=	-g -Wall -Wextra -Werror
+CFLAGS		=	-Wall -Wextra -Werror
 
 RM			=	rm -rf
 

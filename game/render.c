@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 13:58:00 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/06 08:50:51 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 17:12:27 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ static void	draw_text(t_game game)
 			game.window_size.x - IMG_SIZE / 2.3,
 			IMG_SIZE - IMG_SIZE / 1.5,
 			15921152, str);
+	free(str);
 }
 
 void	render(t_game game)
