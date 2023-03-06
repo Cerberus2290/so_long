@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 12:48:32 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/06 10:34:11 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 13:37:07 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define SO_LONG_H
 
 # include "basic.h"
-# include <mlx.h>
+# include "minilibx/mlx.h"
 
 /* size of every sprite in the game */
 # define IMG_SIZE 64
