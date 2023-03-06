@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 10:35:02 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 13:31:36 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 18:05:07 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_enemies	*new_enemy(t_enemytypes type, t_tile *tile)
 {
 	t_enemies	*enemy;
 
-	enemy = malloc(sizeof(t_enemies));
+	enemy = ft_calloc(sizeof(t_enemies), 1);
 	if (enemy == NULL)
 		return (null_error("malloc error creating enemies - abort"));
 	enemy->type = type;

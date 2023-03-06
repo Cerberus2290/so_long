@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 13:41:45 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 13:03:20 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 18:07:30 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	free_enemies(t_game *game)
 	while (TRUE)
 	{
 		next = game->enemy_list->next;
+		printf("%p\n%p\n", next, game->enemy_list);
 		free (game->enemy_list);
 		if (next == NULL)
 			break ;
@@ -46,7 +47,7 @@ int	end_program(t_game *game)
 {
 	free_tilemap(game);
 	game->tilemap = NULL;
-	free_enemies(game);
+	/* free_enemies(game); */
 	game->enemy_list = NULL;
 	exit(0);
 }
