@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 10:43:31 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 10:36:34 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 10:46:05 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ static void	open_collect_imgs(t_game *game)
 	game->collect_imgs.img_1 = mlx_xpm_file_to_image(game->mlx,
 			"sprites/pcb_04.xpm", &game->img_size.x, &game->img_size.y);
 	game->collect_imgs.current_img = game->collect_imgs.img_0;
+	game->effect.img = mlx_xpm_file_to_image(game->mlx,
+			"sprites/effect_w.xpm", &game->img_size.x, &game->img_size.y);
 }
 
 static void	open_enemy_imgs(t_game *game)
