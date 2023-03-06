@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 12:15:27 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 13:17:42 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 13:51:45 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,6 @@ int	input(int key, t_game *game)
 	else
 		return (0);
 	if (move)
-		ft_printf("Moves -> %02d\n", ++game->moves);
+		ft_printf("Moves -> %d\n", ++game->moves);
 	return (1);
 }
