@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 10:43:31 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/06 10:46:05 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 11:59:49 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	open_player_imgs(t_game *game)
 	game->player.idle_img_1 = mlx_xpm_file_to_image(game->mlx,
 			"sprites/player_02.xpm", &game->img_size.x, &game->img_size.y);
 	game->player.action_img = mlx_xpm_file_to_image(game->mlx,
-			"sprites/player_03.xmp", &game->img_size.x, &game->img_size.y);
+			"sprites/player_03.xpm", &game->img_size.x, &game->img_size.y);
 	game->player.current_img = game->player.action_img;
 }
 
@@ -46,6 +46,9 @@ static void	open_enemy_imgs(t_game *game)
 	game->enemy_imgs.basic_current = game->enemy_imgs.basic_01;
 	game->enemy_imgs.follow_01 = mlx_xpm_file_to_image(game->mlx,
 			"sprites/enemy_03.xpm", &game->img_size.x, &game->img_size.y);
+	game->enemy_imgs.follow_02 = mlx_xpm_file_to_image(game->mlx,
+			"sprites/enemy_04.xpm", &game->img_size.x, &game->img_size.y);
+	game->enemy_imgs.follow_current = game->enemy_imgs.follow_01;
 }
 
 static void	open_portal_imgs(t_game *game)

@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 16:05:07 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/06 09:36:27 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 12:27:47 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ static int	checks(char **map, t_mapdata *data)
 
 /// @brief checks if entire map is valid
 /// @return FALSE and printing an error message otherwise TRUE
-
 
 int	valid_map(char **map)
 {

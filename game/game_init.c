@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 11:50:07 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/06 08:50:28 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 11:16:30 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ static void	anima_setup(t_game *game)
 {
 	game->player.frames_idle = 17;
 	game->player.frames_action = 10;
+	game->collect_imgs.anima_frames = 25;
 	game->effect.frames = 7;
 	game->enemy_imgs.basic_anim = 16;
 	game->enemy_imgs.follow_anim = 6;
