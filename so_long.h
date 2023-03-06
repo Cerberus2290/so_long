@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 12:48:32 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 10:37:59 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 14:29:00 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef enum e_maptiles
 	PLAYER = 'P',
 	EXIT = 'E',
 	ENEMY = 'M',
-	FOLLOWER = 'F',
+	FOLLOWER = 'F'
 }	t_maptiles;
 
 /* struct for each maptile */

@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 15:14:52 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 13:29:48 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 08:50:59 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,6 @@ static void	enemy_animation(t_enemy_anim *img)
 	}
 	follower_count++;
 }
-
 
 /* calculates all animation and render
 function is called once every frame */

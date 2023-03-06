@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 13:58:00 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 13:23:52 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 08:50:51 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ static void	draw_effect(t_game game)
 {
 	if (game.effect.counter < game.effect.frames)
 		mlx_put_image_to_window(game.mlx, game.window,
-				game.effect.img,
-				game.effect.pos.x, game.effect.pos.y);
+			game.effect.img,
+			game.effect.pos.x, game.effect.pos.y);
 }
 
 /* displays the amount of moves taken in the window,

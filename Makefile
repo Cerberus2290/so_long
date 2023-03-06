@@ -6,7 +6,7 @@
 #    By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 10:09:33 by tstrassb          #+#    #+#              #
-#    Updated: 2023/03/05 09:58:18 by tstrassb         ###   ########.fr        #
+#    Updated: 2023/03/06 09:35:31 by tstrassb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,13 +16,16 @@ CFLAGS		=	-Wall -Wextra -Werror
 
 RM			=	rm -rf
 
-SRCS		=	$(MAIN_SRC) $(SRC_MAP) $(SRC_GAME)
+SRCS		=	$(MAIN_SRC) $(SRC_GNL) $(SRC_MAP) $(SRC_GAME)
 
 MAIN_SRC	=	main.c error.c
 
 LIBFT_A		=	libft.a
 LIBFT_DIR	=	libft/
 LIBFT		=	$(addprefix $(LIBFT_DIR), $(LIBFT_A))
+
+GNL			=	get_next_line.c get_next_line_utils.c
+SRC_GNL		=	$(addprefix gnl/, $(GNL))
 
 MAP			=	map_reader.c map_checker.c map_checker_utils.c\
 				tilemap_generator.c enemy_generator.c

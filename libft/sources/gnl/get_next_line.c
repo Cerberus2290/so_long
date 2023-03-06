@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tstrassb <tstrassb@student.42.fr>          +#+  +:+       +#+        */
+/*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 10:18:19 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/01/10 13:57:40 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/05 15:32:40 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int main(void)
     int fd;
     char *line;
 
-    fd = open("read_error.txt", O_RDONLY);
+    fd = open("/Users/tstrassb/Documents/42/Projects/so_long/map_files/simple.ber", O_RDONLY);
     if (fd == -1) {
         perror("Error opening read_error.txt");
         return 1;

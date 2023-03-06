@@ -6,14 +6,14 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 08:59:34 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 12:54:21 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 09:32:26 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "map.h"
 #include <fcntl.h>
 #include <unistd.h>
-#include "../libft/include/get_next_line.h"
+#include "../gnl/get_next_line.h"
 
 /* counts how many '\\n' are in map file
 Returns amount */
@@ -50,14 +50,14 @@ static char	**alloc_collums(char *file)
 
 	line_count = mapfile_countlines(file);
 	if (line_count <= 0)
-		return (null_error("error reading map file - file seems to be empty"));
+		return (null_error("error opening or reading map - file may not exist or is empty"));
 	map = malloc(sizeof(char *) * line_count + 1);
 	if (map == NULL)
-		return (null_error("malloc error in map file - abort"));
+		return (null_error("error allocating memory in alloc_collums - abort"));
 	return (map);
 }
 
-/* crates a 2D map - exactly like map file using memory allocation*/
+/* creates a 2D map - exactly like map file using memory allocation*/
 char	**read_map(char *file)
 {
 	char	**map;
@@ -69,7 +69,7 @@ char	**read_map(char *file)
 		return (NULL);
 	fd = open(file, O_RDONLY);
 	i = 0;
-	while (get_next_line(fd))
+	while (get_next_line(fd, &map[i++]))
 		;
 	map[i] = NULL;
 	close(fd);

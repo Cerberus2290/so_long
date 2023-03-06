@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 16:05:07 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 14:18:45 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 09:36:27 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,8 @@ static int	checks(char **map, t_mapdata *data)
 
 /// @brief checks if entire map is valid
 /// @return FALSE and printing an error message otherwise TRUE
+
+
 int	valid_map(char **map)
 {
 	t_mapdata	data;
@@ -88,7 +90,7 @@ int	valid_map(char **map)
 		}
 		data.point.y++;
 	}
-	/* if (!data.b_player || !data.b_exit || !data.b_collect)
-		valid = error("map must have one 'P' and 'E' and at least one 'C'"); */
+	if (!data.b_player || !data.b_exit || !data.b_collect)
+		valid = error("map must have one 'P' and 'E' and at least one 'C'");
 	return (valid);
 }

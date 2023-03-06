@@ -6,13 +6,13 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 10:23:51 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 09:45:56 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/06 09:08:44 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen_get(const char *s)
 {
 	size_t	i;
 
