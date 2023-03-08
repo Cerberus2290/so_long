@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/28 16:42:37 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 13:17:40 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/08 17:44:47 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	pick_to_collect(t_game *game, t_tile *tile)
 	game->collects--;
 	effect_anima(&game->effect, tile->position);
 	action_anima(&game->player);
+	move_to_empty(game, tile);
 }
 
 void	move_to_exit(t_game *game, t_tile *tile)
