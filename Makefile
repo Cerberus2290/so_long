@@ -6,7 +6,7 @@
 #    By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 10:09:33 by tstrassb          #+#    #+#              #
-#    Updated: 2023/03/08 10:29:40 by tstrassb         ###   ########.fr        #
+#    Updated: 2023/03/08 10:42:41 by tstrassb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,15 +64,18 @@ all:			$(NAME)
 				@echo "*                    .                     *"
 				@echo "*  .    .  .               .        .      *"
 				@echo "********************************************$(DEF_COLOR)"
-				@echo "\n"
+				@echo "$(CYAN)********************************************"
+				@echo "*      .   To check Norminette             *"
+				@echo "*    .       type: $(WHITE)make norm$(CYAN)        .      *"
+				@echo "********************************************$(DEF_COLOR)"
 				@echo "$(YELLOW)********************************************"
 				@echo "*   .                .          .     .    *"
-				@echo "*      .                          .        *"
 				@echo "*          .   How to use:                 *"
 				@echo "* type: $(WHITE)./so_long map_files/[mapname].ber$(YELLOW)  *"
 				@echo "*       .               .             .    *"
 				@echo "*    .     after Game launches     .       *"
 				@echo "*  .    .  .     press R   .        .      *"
+				@echo "*          .          .                 .  *"
 				@echo "********************************************$(DEF_COLOR)"
 
 $(NAME):		$(OBJ)
