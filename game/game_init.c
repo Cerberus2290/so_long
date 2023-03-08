@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 11:50:07 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/06 16:45:33 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/08 08:18:43 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ t_tile	**generate_tilemap(char **map, t_game *game);
 returns NULL if any error occurs */
 t_tile	**map_init(int argc, char **argv, t_game *game)
 {
-	char	**map;
-	t_tile	**tilemap;
+	char		**map;
+	t_tile		**tilemap;
 
 	if (!valid_file(argc, argv[1]))
 		return (NULL);
@@ -37,6 +37,11 @@ t_tile	**map_init(int argc, char **argv, t_game *game)
 	ft_free_chartable(map);
 	if (!tilemap)
 		return (NULL);
+	if (!find_valid_path(game))
+	{
+		error("the only way to win, is not to play");
+		exit (0);
+	}
 	return (tilemap);
 }
 

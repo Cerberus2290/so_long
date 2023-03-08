@@ -6,13 +6,13 @@
 #    By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 10:09:33 by tstrassb          #+#    #+#              #
-#    Updated: 2023/03/06 17:24:56 by tstrassb         ###   ########.fr        #
+#    Updated: 2023/03/08 08:19:33 by tstrassb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	so_long
 
-CFLAGS		=	-Wall -Wextra -Werror
+CFLAGS		=	-g -Wall -Wextra -Werror
 
 RM			=	rm -rf
 
@@ -28,7 +28,7 @@ GNL			=	get_next_line.c get_next_line_utils.c
 SRC_GNL		=	$(addprefix gnl/, $(GNL))
 
 MAP			=	map_reader.c map_checker.c map_checker_utils.c\
-				tilemap_generator.c enemy_generator.c
+				tilemap_generator.c enemy_generator.c valid_path.c
 SRC_MAP		=	$(addprefix map/, $(MAP))
 
 GAME		=	game_init.c open_images.c open_wall_images.c open_panel.c\

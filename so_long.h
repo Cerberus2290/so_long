@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 12:48:32 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/06 13:37:07 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/07 16:37:23 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,6 +165,7 @@ typedef struct s_game
 	void			*window;
 	t_vector		window_size;
 	t_tile			**tilemap;
+	char			**map;
 	t_player		player;
 	int				og_collects;
 	int				collects;
