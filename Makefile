@@ -6,7 +6,7 @@
 #    By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 10:09:33 by tstrassb          #+#    #+#              #
-#    Updated: 2023/03/08 08:19:33 by tstrassb         ###   ########.fr        #
+#    Updated: 2023/03/08 10:29:40 by tstrassb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,24 @@ CYAN		=	\033[0;96m
 WHITE		=	\033[0;97m
 
 all:			$(NAME)
+				@echo "$(YELLOW)********************************************"
+				@echo "*   .                .          .     .    *"
+				@echo "*      .                          .        *"
+				@echo "*          .   Welcome to                  *"
+				@echo "*    .            Space             .      *"
+				@echo "*                    .                     *"
+				@echo "*  .    .  .               .        .      *"
+				@echo "********************************************$(DEF_COLOR)"
+				@echo "\n"
+				@echo "$(YELLOW)********************************************"
+				@echo "*   .                .          .     .    *"
+				@echo "*      .                          .        *"
+				@echo "*          .   How to use:                 *"
+				@echo "* type: $(WHITE)./so_long map_files/[mapname].ber$(YELLOW)  *"
+				@echo "*       .               .             .    *"
+				@echo "*    .     after Game launches     .       *"
+				@echo "*  .    .  .     press R   .        .      *"
+				@echo "********************************************$(DEF_COLOR)"
 
 $(NAME):		$(OBJ)
 				@echo "$(BLUE)-compiling libft...$(DEF_COLOR)"
