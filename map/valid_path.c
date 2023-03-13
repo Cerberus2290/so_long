@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 16:00:29 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/13 11:45:09 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/13 12:48:16 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_bool	find_path(t_tile *tile, t_bool c_found,
 		t_bool e_found, time_t start_time)
 {
-	if (difftime(time(NULL), start_time) >= 5.0)
+	if (difftime(time(NULL), start_time) >= 20.0)
 		return (FALSE);
 	if (tile == NULL || tile->type == WALL || tile->type == ENEMY
 		|| tile->type == FOLLOWER || tile->type == VALID)
@@ -28,7 +28,7 @@ t_bool	find_path(t_tile *tile, t_bool c_found,
 		return (TRUE);
 	}
 	tile->type = VALID;
-	if (difftime(time(NULL), start_time) >= 5.0)
+	if (difftime(time(NULL), start_time) >= 20.0)
 		return (FALSE);
 	if (find_path(tile->up, c_found, e_found, start_time))
 		return (TRUE);
