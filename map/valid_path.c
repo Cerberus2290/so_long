@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/07 16:00:29 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/13 10:26:42 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/13 11:27:33 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_bool	find_path(t_tile *tile, t_bool c_found, t_bool e_found)
 {
-	if (tile == NULL || tile->type == WALL || tile->type == ENEMY || tile->type == FOLLOWER
-		|| tile->type == VALID)
+	if (tile == NULL || tile->type == WALL || tile->type == ENEMY
+		|| tile->type == FOLLOWER || tile->type == VALID)
 		return (FALSE);
 	if (tile->type == COLLECTABLE)
 		c_found = TRUE;
