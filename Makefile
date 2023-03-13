@@ -6,7 +6,7 @@
 #    By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/01 10:09:33 by tstrassb          #+#    #+#              #
-#    Updated: 2023/03/08 17:19:46 by tstrassb         ###   ########.fr        #
+#    Updated: 2023/03/13 10:38:15 by tstrassb         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,8 +73,8 @@ all:			$(NAME)
 				@echo "*          .   How to use:                 *"
 				@echo "* type: $(WHITE)./so_long map_files/[mapname].ber$(YELLOW)  *"
 				@echo "*       .               .             .    *"
-				@echo "*    .     after Game launches     .       *"
-				@echo "*  .    .  .     press R   .        .      *"
+				@echo "*    .      after Game launches     .      *"
+				@echo "*  .    .  .  press R to start  .   .      *"
 				@echo "*          .          .                 .  *"
 				@echo "********************************************$(DEF_COLOR)"
 

@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/25 15:56:53 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/08 08:16:52 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/11 12:41:06 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 int		valid_file(int argc, char *file);
 char	**read_map(char *file);
 int		valid_map(char **map);
-t_bool	find_valid_path(t_game *game);
+t_bool	valid_path(t_game *game);
 
 /* struct to check map data */
 typedef struct s_mapdata

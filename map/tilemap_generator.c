@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 09:45:49 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/05 13:44:40 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/13 10:08:50 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ t_maptiles	define_tiletype(char definition)
 		return (EXIT);
 	if (definition == 'H' || definition == 'V')
 		return (ENEMY);
+	if (definition == 'A')
+		return (VALID);
 	else if (definition == 'F')
 		return (FOLLOWER);
 	return (EMPTY);

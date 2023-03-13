@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/01 10:43:31 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/06 11:59:49 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/13 10:13:23 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,12 @@ static void	open_portal_imgs(t_game *game)
 			"sprites/portal_02.xpm", &game->img_size.x, &game->img_size.y);
 }
 
+static void	open_valid_img(t_game *game)
+{
+	game->valid_img = mlx_xpm_file_to_image(game->mlx,
+			"sprites/valid.xpm", &game->img_size.x, &game->img_size.y);
+}
+
 /* opens all *.xpm files from "sprites/" used in game */
 void	open_images(t_game *game)
 {
@@ -68,4 +74,5 @@ void	open_images(t_game *game)
 	open_collect_imgs(game);
 	open_enemy_imgs(game);
 	open_portal_imgs(game);
+	open_valid_img(game);
 }

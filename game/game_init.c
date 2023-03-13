@@ -6,7 +6,7 @@
 /*   By: tstrassb <tstrassb@student.42>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/26 11:50:07 by tstrassb          #+#    #+#             */
-/*   Updated: 2023/03/08 17:24:41 by tstrassb         ###   ########.fr       */
+/*   Updated: 2023/03/13 08:24:54 by tstrassb         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_tile	**map_init(int argc, char **argv, t_game *game)
 	ft_free_chartable(map);
 	if (!tilemap)
 		return (NULL);
-	if (!find_valid_path(game))
+	if (!valid_path(game))
 	{
 		error("the only way to win, is not to play");
 		exit (0);
