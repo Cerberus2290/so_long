@@ -27,3 +27,16 @@
 <p align="right">
  <a href="https://github.com/Cerberus2290/so_long#-beware-">back to top</a>
 </p>
+
+# <a name="objectives">Objectives</a>
+
+| Objectives | ![Logo_Monolith_small](https://user-images.githubusercontent.com/120580537/209333599-dc44418d-8ee7-42b6-8a4a-7ff328778d87.png) |
+| ----- | ----- |
+| It’s time for you to create a basic computer graphics project! |
+| **so long** will help you improve your skills in the following areas: window management,<br>event handling, colors, textures, and so forth. |
+| You are going to use the school graphical library: **the MiniLibX!**<br>This library was developed internally and includes basic necessary tools to open a window, create images<br>and deal with keyboard and mouse events. |
+| The other goals are similar to every other goal for this first year: being rigorous, level<br>up in **C** programming, use basic algorithms, do some information research, and so forth. |
+
+<p align="right">
+ <a href="https://github.com/Cerberus2290/so_long#-beware-">back to top</a>
+</p>
