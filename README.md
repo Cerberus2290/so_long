@@ -40,3 +40,27 @@
 <p align="right">
  <a href="https://github.com/Cerberus2290/so_long#-beware-">back to top</a>
 </p>
+
+# <a name="manda">Mandatory Part</a>
+
+## III.1 - The "so_long" program
+
+| Mandatory part | ![Logo_Monolith_small](https://user-images.githubusercontent.com/120580537/209333599-dc44418d-8ee7-42b6-8a4a-7ff328778d87.png) |
+| ----- | ----- |
+| **Program name** | so_long |
+| **Turn in files** | Makefile, *.h, *.c, maps, textures |
+| **Makefile** | NAME, all, clean, fclean, re |
+| **Arguments** | A map in format *.ber |
+| **External functs.** | * open, close, read, write, malloc, free, perror, strerror, exit <br> * All functions of the math library (-lm compiler option, man man 3 math) <br> * All functions of the MiniLibX <br> * ft_printf and any equivalent **YOU** coded |
+| **Libft authorized** | Yes |
+| Description | You must create a basic 2D game in which a dolphin escapes Earth after eating some fish. <br> Instead of a dolphin, fish, and the Earth, you can use any character, any collectible and any place you want. |
+
+Your project must comply with the following rules:
+
+* You **must** use the *MiniLibX*. Either the version available on the school machines, or installing it using its sources.
+* You have to turn in a *Makefile* which will compile your source files. It must not relink.
+* Your program has to take as parameter a map description file ending with the **.ber** extension.
+
+<p align="right">
+ <a href="https://github.com/Cerberus2290/so_long#-beware-">back to top</a>
+</p>
