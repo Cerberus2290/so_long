@@ -61,6 +61,15 @@ Your project must comply with the following rules:
 * You have to turn in a *Makefile* which will compile your source files. It must not relink.
 * Your program has to take as parameter a map description file ending with the **.ber** extension.
 
-<p align="right">
- <a href="https://github.com/Cerberus2290/so_long#-beware-">back to top</a>
-</p>
+## III.2 - Game
+
+* The player’s goal is to collect every collectible present on the map, then escape chosing the shortest possible route.
+* The **W**, **A**, **S**, and **D** keys must be used to move the main character.
+* The player should be able to move in these **4 directions**: up, down, left, right.
+* The player should *not* be able to move into walls.
+* At every move, the current **number of movements** must be displayed in the shell.
+* You have to use a **2D view** (top-down or profile).
+* The game doesn’t have to be real time.
+* You can create the world you want!
+
+## :information_source: If you prefer, you can use ZQSD or the arrow keys on your keyboard to move your main character.<br> :information_source:
