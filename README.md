@@ -72,4 +72,4 @@ Your project must comply with the following rules:
 * The game doesn’t have to be real time.
 * You can create the world you want!
 
-## :information_source: If you prefer, you can use ZQSD or the arrow keys on your keyboard to move your main character.<br> :information_source:
+## :information_source: <br> If you prefer, you can use ZQSD or the arrow keys on your keyboard to move your main character.<br> :information_source:
