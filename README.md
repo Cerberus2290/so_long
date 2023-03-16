@@ -22,8 +22,8 @@
 
 | Introduction | ![Logo_Monolith_small](https://user-images.githubusercontent.com/120580537/209333599-dc44418d-8ee7-42b6-8a4a-7ff328778d87.png) |
 | ----- | ----- |
-| Being a developer is a great thing for creating your own game.<br>But a good game needs some good assets. In order to create 2D games, you will have <br>to search for tiles, tilesets, sprites, and sprite sheets.<br>Fortunately, some talented artists are willing to share their works on platforms like: <br>itch.io<br>In any case, try to respect other people’s work. |
+| Being a developer is a great thing for creating your own game.<br>But a good game needs some good assets. In order to create 2D games, you will have <br>to search for tiles, tilesets, sprites, and sprite sheets.<br>Fortunately, some talented artists are willing to share their works on platforms like: <br>[itch.io](https://itch.io/game-assets/free/tag-sprites)<br>In any case, try to respect other people’s work. |
 
 <p align="right">
- <a href="https://github.com/Cerberus2290/push_swap/blob/main/README.md#-beware-">back to top</a>
+ <a href="https://github.com/Cerberus2290/so_long#-beware-">back to top</a>
 </p>
