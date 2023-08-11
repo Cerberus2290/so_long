@@ -10,7 +10,9 @@
 
 ## If you are a 42 Student, do not copy/paste this project, it will be considered cheating and you will be grated -42.
 
-![](./.extras/so_long01.gif)
+![](./.extras/so_long_01.gif)
+
+![](./.extras/so_long_02.gif)
 
 # 42 Wolfsburg Cursus 
 ## So Long
