@@ -1,5 +1,6 @@
 <h1>
 [![tstrassb's 42 stats](https://badge42.vercel.app/api/v2/clk7xyddm001108l1dlt4bjx7/stats?cursusId=21&coalitionId=354)](https://github.com/JaeSeoKim/badge42)
+</h1>
 
 # So_long - Final Score [![tstrassb's 42 so_long Score](https://badge42.vercel.app/api/v2/clk7xyddm001108l1dlt4bjx7/project/2984720)](https://github.com/JaeSeoKim/badge42)
 
