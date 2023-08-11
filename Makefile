@@ -40,7 +40,7 @@ SRC_GAME	=	$(addprefix game/, $(GAME))
 
 OBJ			=	*.o
 
-INCLUDE		=	-lmlx -framework OpenGL -framework AppKit
+INCLUDE		=	-I minilibx -L minilibx -lmlx -framework OpenGL -framework AppKit
 
 #colors
 
@@ -80,6 +80,7 @@ all:			$(NAME)
 
 $(NAME):		$(OBJ)
 				@echo "$(BLUE)-compiling libft...$(DEF_COLOR)"
+				@make -C minilibx/
 				@make -C $(LIBFT_DIR)
 				@echo "$(BLUE)-compiling GAME...$(DEF_COLOR)"
 				@cc $(CFLAGS) $(OBJ) $(LIBFT) $(INCLUDE) -o $(NAME)
@@ -105,6 +106,7 @@ clean:
 fclean:			clean
 				@echo "$(YELLOW)-Cleaning remaining files ...$(DEF_COLOR)"
 				@$(RM) $(NAME)
+				@make clean -C minilibx/
 				@make -C $(LIBFT_DIR) fclean
 				@sleep 1.5
 				@echo "$(GREEN)---CLEANED!---$(DEF_COLOR)"
