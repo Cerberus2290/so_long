@@ -154,6 +154,3 @@ You will get extra points if you:
 <p align="right">
  <a href="https://github.com/Cerberus2290/so_long#-beware-">back to top</a>
 </p>
-
-# <a name="example">Example:</a>
-
